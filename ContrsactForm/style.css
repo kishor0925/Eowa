@@ -1,0 +1,234 @@
+body {
+    background-color: lightblue;
+    font-family: "Karla", sans-serif;
+    
+}
+form{
+    background-color: hsl(0, 0%, 100%);
+    max-width: 600px;
+    width: 70%;
+    padding: 50px;
+    border-radius: 25px;
+   
+}
+.container{
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input, textarea{
+    border: 2px solid black;
+}
+/****name section***/
+
+.name-sec{
+    display: flex;
+    gap: 20px;
+}
+.name-sec .row label{
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    
+}
+
+.name-sec .row, 
+.email-sec .row,
+.query-sec .query-options .row
+{
+    flex: 1;
+}
+
+/********/
+
+.name-sec .row input,
+.email-sec .row input,
+.query-sec .query-options .row label,
+.mes-sec .row textarea,
+.check-sec .row .check-box,
+.button button
+{
+
+    padding: 15px;
+    border-radius: 10px;
+    box-sizing: border-box  ;
+    width: 100%;
+
+}
+
+/********email section ***/
+.email-sec .row label{
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+
+
+/*****email section***/
+
+
+/*****Query section ******/
+.query-sec .query-label{
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 400;
+}
+.query-sec .query-options{
+    display: flex;
+    gap: 20px;
+   
+}
+.query-sec .query-options .row{
+    flex: 1;    
+}
+
+.query-sec .query-options .row .option{
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    
+}
+
+
+.query-sec .query-options .row .option:focus-within {
+    background-color: hsl(148, 38%, 91%);
+}
+
+
+/*****Query section ******/
+
+
+/****mes sec******/
+.mes-sec{
+    display: flex;
+}
+.mes-sec .row label{
+    display: block;
+}
+
+.mes-sec .row {
+    width: 100%;
+}
+
+.mes-sec .row textarea{
+    resize: none;
+    height: 120px;
+}
+
+
+/****mes sec******/
+
+
+/****check sec ****/
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/****check sec ****/
+
+
+
+
+.button button{
+    background-color: hsl(169, 82%, 27%);
+    color: hsl(0, 0%, 100%);
+    width: 100%;
+    padding: 15px;
+}
+
+
+.name-sec,
+.email-sec,
+.head,
+.mes-sec,
+.check-sec,
+.button{
+    margin-top: 10px;
+}
+
+
+.name-sec .row label,
+.email-sec .row label,
+.query-sec .query-label,
+.mes-sec .row label,
+.check-sec .row label{
+  margin-bottom: 10px;
+}
+input:hover, 
+.query-sec .query-options .row .option:hover, 
+textarea:hover{
+   outline: none;
+   border-color: hsl(169, 82%, 27%);
+   cursor: pointer;
+   
+}
+
+button:hover{
+    background-color: hsl(169, 67%, 28%);
+    cursor: pointer;
+    border-color: hsl(169, 82%, 27%);;
+}
+
+span{
+    color: hsl(169, 67%, 28%);
+}
+small{
+    color:  hsl(0, 66%, 54%);
+}
+
+.name-sec .row.error input,
+.email-sec .row.error  input,
+.query-sec .query-options .row.error  input,
+.mes-sec .row.error  textarea,
+.check-sec .row .check-box.error  input{
+    border-color: hsl(0, 66%, 54%);
+}
+.toast{
+    background-color: black;
+    display: inline-block;
+    border-radius: 25px;
+    color: white;
+    position: fixed;
+    top: 5;
+    left: 50%;
+    transform: translateX(-50%);
+    visibility: hidden;
+
+    
+  
+}
+.toast-body{
+    padding: 10px;
+}
+
+.toast.show{
+    opacity: 1;
+    visibility: visible;
+}
+#remove{
+    position: absolute;
+    top: 5;
+    right: 10px;
+
+    background: none;
+    border: none;
+}
+
+@media (max-width : 500px){
+    .name-sec, .query-sec .query-options{
+        display: block;
+        margin: 5px;
+        column-gap: 5px;
+    }
+    
+}
